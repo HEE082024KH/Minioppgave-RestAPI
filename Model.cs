@@ -1,4 +1,4 @@
-public class VideoGame
+public class VideoGames
 {
   public required int Id { get; set; }
   public required string Title { get; set; }
