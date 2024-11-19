@@ -21,4 +21,14 @@ public class VideoGamesController : ControllerBase
     return VideoGamesList;
   }
 
+  [HttpPost]
+  public IActionResult Post([FromBody] VideoGames videoGames)
+  {
+    if (videoGames == null)
+    {
+      return BadRequest("Entry is empty, fix your shit!");
+    }
+    VideoGamesList.Add(videoGames);
+    return CreatedAtAction(nameof(Post), new { id = videoGames.Id, title = videoGames.Title, developer = videoGames.Developer, year = videoGames.Year });
+  }
 }
