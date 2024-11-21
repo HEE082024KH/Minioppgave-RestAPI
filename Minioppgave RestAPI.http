@@ -1,4 +1,4 @@
-@Minioppgave_RestAPI_HostAddress = http://localhost:5112
+@Minioppgave_RestAPI_HostAddress = http://localhost:5251
 
 GET {{Minioppgave_RestAPI_HostAddress}}/weatherforecast/
 Accept: application/json
